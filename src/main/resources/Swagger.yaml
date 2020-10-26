@@ -1,0 +1,114 @@
+openapi: 3.0.1
+info:
+  title: springBoot项目框架
+  description: springbootTemplate api 文档
+  version: 1.0.0
+servers:
+  - url: 'https://api.example.com/spring-template/v1'
+components:
+  schemas:
+    StudentVo:
+      description: 学生信息
+      properties:
+        name:
+          type: string
+          description: 姓名
+        sex:
+          type: string
+          description: 性别 male男 Female女
+paths:
+  /v1/students:
+    get:
+      summary: 获取学生列表
+      tags:
+        - StudentController(学生管理)
+      parameters:
+        - name: page
+          in: path
+          description: 页
+          required: true
+          schema:
+            type: number
+            format: int64
+        - name: size
+          in: path
+          description: 页大小
+            required: true
+            schema:
+              type: number
+              format: int64
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/StudentVo'
+    post:
+      summary: 添加学生
+      tags:
+        - StudentController(学生管理)
+      requestBody:
+        description: 请求体
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StudentVo'
+    delete:
+      summary: 删除学生
+        tags:
+          - StudentController(学生管理)
+        parameters:
+          - name: student_id
+            in: query
+            required: true
+            description: 学生ID
+            schema:
+              type: string
+              description: 系统类型
+        responses:
+          200:
+            description: ok
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
