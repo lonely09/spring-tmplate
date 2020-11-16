@@ -26,7 +26,6 @@ class SpringtemplateApplicationTests {
         String publicKey = keyPair[1];
         //用私钥加密后的密文
         password = ConfigTools.encrypt(privateKey, password);
-
         System.out.println("privateKey:"+privateKey);
         System.out.println("publicKey:"+publicKey);
         System.out.println("password:"+password);
