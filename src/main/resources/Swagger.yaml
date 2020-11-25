@@ -24,19 +24,19 @@ paths:
         - StudentController(学生管理)
       parameters:
         - name: page
-          in: path
-          description: 页
-          required: true
+          in: query
+          description: 页数
+          required: false
           schema:
-            type: number
-            format: int64
+            type: integer
+            default: 0
         - name: size
-          in: path
-          description: 页大小
-            required: true
-            schema:
-              type: number
-              format: int64
+          in: query
+          description: 每页大小
+          required: false
+          schema:
+            type: integer
+            default: 20
       responses:
         200:
           description: ok
@@ -57,58 +57,21 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/StudentVo'
+      responses:
+        200:
+          description: ok
     delete:
       summary: 删除学生
-        tags:
-          - StudentController(学生管理)
-        parameters:
-          - name: student_id
-            in: query
-            required: true
-            description: 学生ID
-            schema:
-              type: string
-              description: 系统类型
-        responses:
-          200:
-            description: ok
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      tags:
+        - StudentController(学生管理)
+      parameters:
+        - name: student_id
+          in: query
+          required: true
+          description: 学生ID
+          schema:
+            type: string
+            description: 系统类型
+      responses:
+        200:
+          description: ok

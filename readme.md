@@ -43,7 +43,7 @@ SpringBootTemplate 是一款基于Spring的`项目`开发平台 并实现了基�
  - 接口文档：OpenApi 3.1
  
 项目下载与运行
------
+----------------------------------
  - 拉取项目代码
  ```
 git clone git@github.smec-cn.com:itpublic/java-temp-prj.git
@@ -57,7 +57,7 @@ cd java-temp-prj
 -DAPOLLO_CONFIGSERVICE=http://10.1.113.62:32548/
 ```
 其他说明
----------
+--------------------------------
 application.properties 的文件存放于DMP-dev环境 SIMP组织 
 
 DMP地址：[dmp-dev](https://dmp-dev.smec-cn.com)
