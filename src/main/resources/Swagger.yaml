@@ -75,3 +75,30 @@ paths:
       responses:
         200:
           description: ok
+
+  /v1/students/sort:
+    get:
+      summary: 获取学生列表包含分页以及排序
+      tags:
+        - StudentController(学生管理)
+      parameters:
+        - name: page
+          in: query
+          description: 页数
+          required: false
+          schema:
+            type: Integer
+            default: 0
+        - name: size
+          in: query
+          description: 每页大小
+          required: false
+          schema:
+            type: Integer
+            default: 20
+        - name: sort
+          in: query
+          description: 按照什么字段排序 例如：sort=created,desc 排序方式desc倒序、升序asc
+      responses:
+        200:
+          description: ok
