@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.smec.template</groupId>
-    <artifactId>springtemplate</artifactId>
+    <artifactId>spring-template-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springtemplate</name>
     <description>Demo project for Spring Boot</description>
