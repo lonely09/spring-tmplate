@@ -3,7 +3,10 @@ package com.smec.template;
 import com.alibaba.druid.filter.config.ConfigTools;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import javax.annotation.Resource;
 
 @SpringBootTest
 class SpringtemplateApplicationTests {
@@ -13,7 +16,6 @@ class SpringtemplateApplicationTests {
     }
 
     public static void main(String[] args) throws Exception {
-        ObjectMapper mapper = new ObjectMapper();
         //密码明文
         String password = "fusion3030";
 

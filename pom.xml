@@ -20,6 +20,7 @@
         <druid.version>1.1.22</druid.version>
         <guava.version>29.0-jre</guava.version>
         <apollo.version>1.5.1</apollo.version>
+        <jsonwebtoken.version>0.10.7</jsonwebtoken.version>
     </properties>
 
     <dependencies>
@@ -67,10 +68,23 @@
             <version>${guava.version}</version>
         </dependency>
 
+        <!--    权限中台客户端    -->
         <dependency>
             <groupId>com.smec.pri</groupId>
             <artifactId>pri-auth-client</artifactId>
             <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>${jsonwebtoken.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -82,12 +96,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
