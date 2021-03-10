@@ -36,7 +36,7 @@ public class StudentControllerTest {
 
     @Test
     public void getStudents() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.
+        Object o=mockMvc.perform(MockMvcRequestBuilders.
                 get("/v1/students")
                 .accept(MediaType.APPLICATION_JSON_VALUE)
                 .param("page","0")
@@ -46,5 +46,7 @@ public class StudentControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())//预期结果
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))// 预期返回值的媒体类型text/plain;charset=UTF-8
                 .andReturn();
+        assert o!=null;
     }
 }
+
