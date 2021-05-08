@@ -54,7 +54,7 @@ cd java-temp-prj
  ```
 -Dapp.id=qixowjuscz.java-temp-prj
 -Dapollo.bootstrap.namespaces=application
--DAPOLLO_CONFIGSERVICE=http://10.1.113.62:32548/
+-Dapollo.configService=http://10.1.113.62:32548
 ```
 其他说明
 --------------------------------
